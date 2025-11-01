@@ -1,0 +1,160 @@
+Switch#sh running-config 
+Building configuration...
+
+Current configuration : 2153 bytes
+!
+version 12.2(37)SE1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Switch
+!
+!
+!
+!
+!
+!
+ip routing
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ no switchport
+ ip address 9.9.9.6 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/3
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/4
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/5
+ no switchport
+ ip address 9.9.9.13 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan50
+ mac-address 0002.170e.a701
+ ip address 10.37.0.1 255.255.0.0
+ ip helper-address 10.32.0.2
+!
+interface Vlan60
+ mac-address 0002.170e.a702
+ ip address 10.40.0.1 255.255.0.0
+ ip helper-address 10.32.0.2
+!
+interface Vlan90
+ mac-address 0002.170e.a703
+ ip address 10.32.0.1 255.252.0.0
+!
+interface Vlan100
+ mac-address 0002.170e.a704
+ ip address 10.36.0.1 255.255.0.0
+ ip helper-address 10.32.0.2
+!
+router ospf 1
+ log-adjacency-changes
+ network 10.32.0.0 0.3.255.255 area 0
+ network 10.40.0.0 0.3.255.255 area 0
+ network 9.9.9.4 0.0.0.3 area 0
+ network 9.9.9.12 0.0.0.3 area 0
+ network 10.40.0.0 0.0.255.255 area 0
+ network 10.36.0.0 0.0.255.255 area 0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+!
+end
