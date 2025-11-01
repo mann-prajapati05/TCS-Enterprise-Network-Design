@@ -48,8 +48,8 @@ Subnetting applied to distribute networks across regions:
 |----------------|------------------|--------------------------|
 | Mumbai HQ      | 10.0.0.0/11      | VLAN10 HR, VLAN20 Sales, VLAN30 IT , VLAN40 Server Room|
 | Hyderabad Hub  | 10.32.0.0/11     | VLAN60 AI Solutions, VLAN100 Sales , Vlan90 Server Room |
-| Bengaluru Hub  | 10.64.0.0/11     | VLAN70 Sales , VLAN110 Server Room |
-| Chennai Hub    | 10.96.0.0/11     | Server Room |
+| Bengaluru Hub  | 10.64.0.0/11     | Server Room |
+| Chennai Hub    | 10.96.0.0/11     | VLAN70 Sales , VLAN110 Server Room |
 | Pune Hub       | 10.128.0.0/11    | Server Room |
 | Delhi-NCR Hub  | 10.160.0.0/11    | Server Room |
 
